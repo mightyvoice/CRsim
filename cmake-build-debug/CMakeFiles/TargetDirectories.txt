@@ -1,0 +1,3 @@
+/Users/jili/CLionProjects/CRsim/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/jili/CLionProjects/CRsim/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jili/CLionProjects/CRsim/cmake-build-debug/CMakeFiles/CRsim.dir

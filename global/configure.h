@@ -1,0 +1,17 @@
+//
+// Created by Ji Li on 2017/9/9.
+//
+
+#ifndef CRSIM_CONFIGURE_H
+#define CRSIM_CONFIGURE_H
+
+#define ALLOC_RANDOM_CHAN_PU
+//#define ALLOC_UNUSED_CHAN_PU
+
+//#define SET_RANDOM_PU_PKT_LEN
+#define SET_STATIC_PU_PKT_LEN
+
+//#define DIFF_NET_PARAMETERS_EACH_SIM
+#define SAME_NET_PARAMETERS_EACH_SIM
+
+#endif //CRSIM_CONFIGURE_H
