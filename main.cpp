@@ -1,6 +1,8 @@
-#include <iostream>
+
+#include "simulation/all_simu.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    DirectionalAntennaImprove cur;
+    cur.startSimulation();
     return 0;
 }

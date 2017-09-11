@@ -8,29 +8,25 @@
 
 #include "en_jump_stay.h"
 
-EnJsHop:: EnJsHop():JsHop()
-{
+EnJsHop::EnJsHop() : JsHop() {
     init_seq();
 }
 
-EnJsHop:: EnJsHop(int cur_avai_n):JsHop(cur_avai_n)
-{
+EnJsHop::EnJsHop(int cur_avai_n) : JsHop(cur_avai_n) {
     init_seq();
 }
 
-EnJsHop:: EnJsHop(int cur_chan_n, vI &avai):JsHop(cur_chan_n)
-{
+EnJsHop::EnJsHop(int cur_chan_n, vI &avai) : JsHop(cur_chan_n) {
     avai = avai;
     init_seq();
 }
 
-void EnJsHop::  init_seq()
-{
+void EnJsHop::init_seq() {
     init_prime_num();
-    for(int i = global::TOTAL_CHAN_NUM; i < global::TOTAL_CHAN_NUM*2; i++){
-        if(prime[i] == 0) {
+    for (int i = global::TOTAL_CHAN_NUM; i < global::TOTAL_CHAN_NUM * 2; i++) {
+        if (prime[i] == 0) {
             P = i;
-            return ;
+            return;
         }
     }
 //    i0 = CRmath::randIntDiff(1, avai_chan_n);
@@ -49,53 +45,47 @@ void EnJsHop::  init_seq()
 #endif
 }
 
-void EnJsHop:: resetChanHop()
-{
+void EnJsHop::resetChanHop() {
     i0 = CRmath::randIntDiff(1, M);
     r0 = CRmath::randIntDiff(1, P);
 }
 
-int EnJsHop:: getChanAtTimeT(int t)
-{
+int EnJsHop::getChanAtTimeT(int t) {
     return 0;
 }
 
-int EnJsHop:: getChanAtTimeT(int t, const vI &avai)
-{
+int EnJsHop::getChanAtTimeT(int t, const vI &avai) {
     int j;
-    int n = t / (4*P);
-    int i00 = (i0 + n -1) % P + 1;// update the i0
-    t %= (4*P);
-    if(t < 3*P){
-        j = (i00 + t*r0 - 1) % P + 1;
-    }
-    else{
+    int n = t / (4 * P);
+    int i00 = (i0 + n - 1) % P + 1;// update the i0
+    t %= (4 * P);
+    if (t < 3 * P) {
+        j = (i00 + t * r0 - 1) % P + 1;
+    } else {
         j = r0;
     }
-    if(j > M){
-        j = (j-1)%M + 1;
+    if (j > M) {
+        j = (j - 1) % M + 1;
     }
-    if(!vectorFind(avai, j)){
+    if (!vectorFind(avai, j)) {
         j = avai[(j - 1) % avai.size()];
     }
-    curChan  = j;
+    curChan = j;
     return j;
 }
 
-int EnJsHop:: getChanAtTimeTBeforeReplace(int t)
-{
+int EnJsHop::getChanAtTimeTBeforeReplace(int t) {
     int j;
-    int n = t / (4*P);
-    int i00 = (i0 + n -1) % P + 1;// update the i0
-    t %= (4*P);
-    if(t < 3*P){
-        j = (i00 + t*r0 - 1) % P + 1;
-    }
-    else{
+    int n = t / (4 * P);
+    int i00 = (i0 + n - 1) % P + 1;// update the i0
+    t %= (4 * P);
+    if (t < 3 * P) {
+        j = (i00 + t * r0 - 1) % P + 1;
+    } else {
         j = r0;
     }
-    if(j > M){
-        j = (j-1)%M + 1;
+    if (j > M) {
+        j = (j - 1) % M + 1;
     }
 //    if(!vectorFind(avai, j)){
 //        j = avai[(j - 1) % avai.size()];

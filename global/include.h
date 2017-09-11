@@ -41,12 +41,12 @@ typedef map<string, int> mSI;
 typedef set<int> sI;
 typedef set<pI> spI;
 typedef priority_queue<int> qmax;
-typedef priority_queue<int, vector<int>, greater<int> >qmin;
+typedef priority_queue<int, vector<int>, greater<int> > qmin;
 typedef map<int, int>::iterator mI_it;
 typedef set<int>::iterator sI_it;
 
 const double PI = acos(-1.0);
-const int ioo = (~0)-(1<<31);
-const LL loo = (~(LL)0)-((LL)1<<63);//
+const int ioo = (~0) - (1 << 31);
+const LL loo = (~(LL) 0) - ((LL) 1 << 63);//
 
 #endif //CRSIM_INCLUDE_H

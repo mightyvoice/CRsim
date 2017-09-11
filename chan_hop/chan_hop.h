@@ -7,7 +7,7 @@
 
 #include "../global/include.h"
 
-class ChanHop{
+class ChanHop {
 public:
     int M;
     int totalChan;
@@ -19,11 +19,14 @@ public:
     vI hopSequence;//Hopping sequence, index from 1
 
     ChanHop();
+
     ChanHop(int chan_n);
+
     ChanHop(int chan_n, vI &avai);
 
     virtual void init_seq() = 0;// Init the channel hopping sequence
     virtual void resetChanHop() = 0;
+
     virtual int getChanAtTimeT(int t) = 0; //Get the channel to hop to at time t;
     virtual int getChanAtTimeT(int t, const vI &avai) = 0; //Get the channel to hop to at time t;
     virtual int getChanAtTimeTBeforeReplace(int t) = 0;

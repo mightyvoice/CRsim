@@ -15,11 +15,11 @@
 #include "../lib/lib.h"
 #include "user.h"
 
-class PU: public User{
+class PU : public User {
 public:
     int licensedChan;
     int curComePktID;
-    int chanOfEachTimeSlot[global::TOTAL_TIME_SLOT+10];//equal to -1 if pu is inactive
+    int chanOfEachTimeSlot[global::TOTAL_TIME_SLOT + 10];//equal to -1 if pu is inactive
     bool ifTransmitting;
 
 

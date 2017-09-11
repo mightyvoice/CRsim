@@ -101,7 +101,34 @@ CMakeFiles/CRsim.dir/lib/math.cpp.o
  /Users/jili/CLionProjects/CRsim/lib/math.h
  /Users/jili/CLionProjects/CRsim/lib/vec2.h
 CMakeFiles/CRsim.dir/main.cpp.o
+ /Users/jili/CLionProjects/CRsim/chan_hop/all_chan_hop.h
+ /Users/jili/CLionProjects/CRsim/chan_hop/chan_hop.h
+ /Users/jili/CLionProjects/CRsim/chan_hop/en_jump_stay.h
+ /Users/jili/CLionProjects/CRsim/chan_hop/jump_stay.h
+ /Users/jili/CLionProjects/CRsim/chan_hop/my_send_rev_hop.h
+ /Users/jili/CLionProjects/CRsim/chan_hop/my_seq.h
+ /Users/jili/CLionProjects/CRsim/chan_hop/my_split_spec.h
+ /Users/jili/CLionProjects/CRsim/chan_hop/sector_hop.h
+ /Users/jili/CLionProjects/CRsim/global/configure.h
+ /Users/jili/CLionProjects/CRsim/global/global.h
+ /Users/jili/CLionProjects/CRsim/global/include.h
+ /Users/jili/CLionProjects/CRsim/lib/debug.h
+ /Users/jili/CLionProjects/CRsim/lib/graph.h
+ /Users/jili/CLionProjects/CRsim/lib/lib.h
+ /Users/jili/CLionProjects/CRsim/lib/math.h
+ /Users/jili/CLionProjects/CRsim/lib/util.h
+ /Users/jili/CLionProjects/CRsim/lib/vec2.h
  /Users/jili/CLionProjects/CRsim/main.cpp
+ /Users/jili/CLionProjects/CRsim/network/channel.h
+ /Users/jili/CLionProjects/CRsim/network/network.h
+ /Users/jili/CLionProjects/CRsim/network/packet.h
+ /Users/jili/CLionProjects/CRsim/simulation/DirectionalAntennaImprove.h
+ /Users/jili/CLionProjects/CRsim/simulation/all_simu.h
+ /Users/jili/CLionProjects/CRsim/simulation/my_su.h
+ /Users/jili/CLionProjects/CRsim/user/cognitive_radio.h
+ /Users/jili/CLionProjects/CRsim/user/pu.h
+ /Users/jili/CLionProjects/CRsim/user/su.h
+ /Users/jili/CLionProjects/CRsim/user/user.h
 CMakeFiles/CRsim.dir/network/channel.cpp.o
  /Users/jili/CLionProjects/CRsim/global/configure.h
  /Users/jili/CLionProjects/CRsim/global/global.h

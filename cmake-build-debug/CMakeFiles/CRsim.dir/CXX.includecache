@@ -179,8 +179,8 @@ math.h
 /Users/jili/CLionProjects/CRsim/global/include.h
 
 /Users/jili/CLionProjects/CRsim/main.cpp
-iostream
--
+simulation/all_simu.h
+/Users/jili/CLionProjects/CRsim/simulation/all_simu.h
 
 /Users/jili/CLionProjects/CRsim/network/channel.cpp
 channel.h
@@ -219,6 +219,10 @@ DirectionalAntennaImprove.h
 /Users/jili/CLionProjects/CRsim/network/network.h
 ../chan_hop/all_chan_hop.h
 /Users/jili/CLionProjects/CRsim/chan_hop/all_chan_hop.h
+
+/Users/jili/CLionProjects/CRsim/simulation/all_simu.h
+DirectionalAntennaImprove.h
+/Users/jili/CLionProjects/CRsim/simulation/DirectionalAntennaImprove.h
 
 /Users/jili/CLionProjects/CRsim/simulation/my_su.cpp
 my_su.h

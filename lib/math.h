@@ -8,7 +8,7 @@
 #include "../global/include.h"
 #include "vec2.h"
 
-class CRmath{
+class CRmath {
 private:
     static unsigned int randomSeed;
     static unsigned int randomSeedDiff;
@@ -46,10 +46,10 @@ public:
     static int get1or0BasedOnPro(double _probability);
 
     /* the number of C(n, m) */
-    static double  nChooseM(int n, int m);
+    static double nChooseM(int n, int m);
 
     /* choose m numbers from a vector<int> */
-    static vector<vector<int>>  chooseElementsFromVec(const vector<int> &a, int m);
+    static vector<vector<int>> chooseElementsFromVec(const vector<int> &a, int m);
 
     /* choose m numbers from [1, n] */
     static vector<vector<int> > chooseMnumbersFromN(int n, int m);
@@ -87,32 +87,32 @@ public:
     /* suqared distance between point x and point y */
 
     template<class T>
-    static T twoPointsDistanceSquare(T x1, T y1, T x2, T y2){
-        return (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2);
+    static T twoPointsDistanceSquare(T x1, T y1, T x2, T y2) {
+        return (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);
     }
 
     template<class T>
-    static T twoPointsDistanceSquare(const pair<T, T> &x, const pair<T, T>  &y){
-        return (x.first-y.first)*(x.first-y.first) + (x.second-y.second)*(x.second-y.second);
+    static T twoPointsDistanceSquare(const pair<T, T> &x, const pair<T, T> &y) {
+        return (x.first - y.first) * (x.first - y.first) + (x.second - y.second) * (x.second - y.second);
     }
 
     /* distance between point x and point y */
     template<class T>
-    static T twoPointsDistance(const pair<T, T> &x, const pair<T, T>  &y){
-        return sqrt( (x.first-y.first)*(x.first-y.first) + (x.second-y.second)*(x.second-y.second) );
+    static T twoPointsDistance(const pair<T, T> &x, const pair<T, T> &y) {
+        return sqrt((x.first - y.first) * (x.first - y.first) + (x.second - y.second) * (x.second - y.second));
     }
 
     /* If point z is inside the angle formed by line ax and line ay */
     template<class T>
-    static bool pointAboveLine(const pair<T, T> &x, const pair<T, T> &y,  const pair<T, T> &z){
+    static bool pointAboveLine(const pair<T, T> &x, const pair<T, T> &y, const pair<T, T> &z) {
         CRvec<T> a(x, y);
         CRvec<T> b(x, z);
         return a % b > global::EPS;
     };
 
     /* If point z is above the line connected by point x and y */
-    template <class T>
-    static bool pointInsideAngle(const pair<T, T> a, const pair<T, T> &x, const pair<T, T> &y,  const pair<T, T> &z) {
+    template<class T>
+    static bool pointInsideAngle(const pair<T, T> a, const pair<T, T> &x, const pair<T, T> &y, const pair<T, T> &z) {
         return pointAboveLine(a, x, z) && pointAboveLine(a, z, y);
     };
 

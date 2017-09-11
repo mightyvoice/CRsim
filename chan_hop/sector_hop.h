@@ -15,7 +15,7 @@
 #include "../lib/lib.h"
 #include "chan_hop.h"
 
-class SectorHop{
+class SectorHop {
 public:
     global::SEND_OR_RECEIVE sendOrRev;
     int sectorNum;
@@ -24,12 +24,17 @@ public:
     int curIndex;
 
     int getIndexAtTimeT(int t);
+
     int getCurIndex();
+
     int senderGetCurIndex();
+
     int receiverGetCurIndex();
 
     SectorHop(int n);
+
     SectorHop(int n, global::SEND_OR_RECEIVE _role);
+
     SectorHop();
 
 };

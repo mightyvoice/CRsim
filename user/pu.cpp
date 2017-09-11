@@ -8,15 +8,13 @@
 
 #include "pu.h"
 
-PU::PU()
-{
+PU::PU() {
     initLocationRandom();
     initAllPkt(global::PKT_ARR_RATE_PU, global::PKT_MAX_LEN_PU);
 }
 
-void PU::initLocationRandom()
-{
-    int x , y;
+void PU::initLocationRandom() {
+    int x, y;
 #ifdef SAME_NET_PARAMETERS_EACH_SIM
     x = CRmath::randInt(0, global::SIDE_LENGTH);
     y = CRmath::randInt(0, global::SIDE_LENGTH);
@@ -27,5 +25,5 @@ void PU::initLocationRandom()
     y = CRmath::randIntDiff(0, SIDE_LENGTH);
 #endif
 
-    location = make_pair((double)x, (double)y);
+    location = make_pair((double) x, (double) y);
 }

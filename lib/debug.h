@@ -15,35 +15,31 @@
 #include "../global/include.h"
 
 template<class T>
-void printArrayFrom0(T x[], const int &n)
-{
-    for(int i = 0; i < n; i++) cout<<x[i]<<' ';
-    cout<<endl;
+void printArrayFrom0(T x[], const int &n) {
+    for (int i = 0; i < n; i++) cout << x[i] << ' ';
+    cout << endl;
 }
 
 template<class T>
-void printArrayFrom1(T x[], const int &n)
-{
-    for(int i = 1; i <= n; i++) cout<<x[i]<<' ';
-    cout<<endl;
+void printArrayFrom1(T x[], const int &n) {
+    for (int i = 1; i <= n; i++) cout << x[i] << ' ';
+    cout << endl;
 }
 
 template<class T>
-void printSingle(T x)
-{
-    cout<<"#x: "<<x<<endl;
+void printSingle(T x) {
+    cout << "#x: " << x << endl;
 }
 
 template<class T>
-void printVector(vector<T> x)
-{
-    if(x.size() <= 0){
-        cout<<"The vector is empty\n";
+void printVector(vector<T> x) {
+    if (x.size() <= 0) {
+        cout << "The vector is empty\n";
     }
-    for(auto p : x){
-        cout<<p<<' ';
+    for (auto p : x) {
+        cout << p << ' ';
     }
-    cout<<endl;
+    cout << endl;
 }
 
 #endif //CRSIM_DEBUG_H

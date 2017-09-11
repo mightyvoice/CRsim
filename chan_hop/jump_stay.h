@@ -15,20 +15,24 @@
 #include "../lib/lib.h"
 #include "chan_hop.h"
 
-class JsHop: public ChanHop{
+class JsHop : public ChanHop {
 private:
 
 public:
     int P;
     int r0;
     int i0;
-    int prime[global::TOTAL_CHAN_NUM*3];
+    int prime[global::TOTAL_CHAN_NUM * 3];
 
     JsHop();
+
     JsHop(int chan_n);
+
     void init_prime_num();
+
     void init_seq();// Init the channel hopping sequence
     void resetChanHop();
+
     int getChanAtTimeT(int t); //Get the channel to hop to at time t;
     int getChanAtTimeT(int t, const vI &avai); //Get the channel to hop to at time t;
     int getChanAtTimeTBeforeReplace(int t);

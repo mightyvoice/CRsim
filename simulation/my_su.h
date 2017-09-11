@@ -16,9 +16,10 @@
 #include "../user/su.h"
 #include "../chan_hop/all_chan_hop.h"
 
-class MySU: public SU{
+class MySU : public SU {
 private:
     void binaryRepresent(int n, int ans[]);
+
 public:
     int curState;
     int usedChanNum;
@@ -28,7 +29,7 @@ public:
     vI stillAvaiChan;
     vI newAllocChan;
     vI newAllocChanRandom;
-    int sendOrReceiveAlloc[global::CR_NUM+2];
+    int sendOrReceiveAlloc[global::CR_NUM + 2];
     vector<vI> avaiChanOnSs;
 
     vector<int> allChannelToHop;
@@ -46,9 +47,13 @@ public:
     ////////////////////////////////////////////Infocom16///////////////////////////////////////
 
     MySU();
+
     void getMyHopSeq();
+
     void getMySendRevHopSeq();
+
     void getTransSeq();
+
     void initAllStartIndexes();
 
 };

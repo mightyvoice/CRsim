@@ -16,25 +16,30 @@
 #include "user.h"
 #include "cognitive_radio.h"
 
-class SU: public User{
+class SU : public User {
 public:
     vector<CognitiveRadio> allCR;
     vI channelToSense;
-    int chanAvaiTimeCount[global::TOTAL_CHAN_NUM+5];
-    int chanAvaiTimeTotal[global::TOTAL_CHAN_NUM+5];
-    int chanCurTotalAvaiTime[global::TOTAL_CHAN_NUM+5];
-    int chanAvaiRoundCount[global::TOTAL_CHAN_NUM+5];
-    int chanUsedTimeCount[global::TOTAL_CHAN_NUM+5];
-    int allChanConAvaiTime[global::TOTAL_CHAN_NUM+2];
+    int chanAvaiTimeCount[global::TOTAL_CHAN_NUM + 5];
+    int chanAvaiTimeTotal[global::TOTAL_CHAN_NUM + 5];
+    int chanCurTotalAvaiTime[global::TOTAL_CHAN_NUM + 5];
+    int chanAvaiRoundCount[global::TOTAL_CHAN_NUM + 5];
+    int chanUsedTimeCount[global::TOTAL_CHAN_NUM + 5];
+    int allChanConAvaiTime[global::TOTAL_CHAN_NUM + 2];
     int lastStayChan;
     int alreadyStayTime;
 
     vI getAvaiChanRandom(int _chan_n);
+
     vI getAvaiChanRandom();
+
+    int replaceNotAvaiWithAvai(int c);
 
 
     SU();
+
     void getNeighRandom();
+
     void initAllCognitiveRadio(int n);
 };
 

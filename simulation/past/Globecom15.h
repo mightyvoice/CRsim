@@ -15,12 +15,15 @@
 #include "../../network/network.h"
 #include "../../chan_hop/en_jump_stay.h"
 
-class Globecom15: public CRNetwork{
+class Globecom15 : public CRNetwork {
 public:
     //considering directional antenna
     Globecom15();
+
     void initAllSU();
+
     void initSimulation();
+
     void startSimulation();
 
 private:
@@ -28,14 +31,23 @@ private:
     bool rendSuc0;
     bool rendSuc1;
     pair<int, int> rendPair;
+
     void initSuNeighborSector(MySU &su);
+
     void initSuNeighborPU(MySU &su);
+
     void getAvaiChanEachSector(MySU &su, int t, int _sector);
+
     void getRendPair(const MySU &su0, const MySU &su1);
+
     void sectorRendOnly();
+
     void initChannelAndSectorRend();
+
     void channelAndSectorRend(int t);
+
     void initChannelAndSectorRendRandom();
+
     void channelAndSectorRendRandom(int t);
 
 };

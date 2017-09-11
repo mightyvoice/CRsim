@@ -8,17 +8,15 @@
 
 #include "su.h"
 
-SU:: SU(): User()
-{
+SU::SU() : User() {
     return;
 }
 
-vI SU::getAvaiChanRandom(int _chan_n)
-{
+vI SU::getAvaiChanRandom(int _chan_n) {
     vI ans;
     this->avaiChanNum = _chan_n * global::CHAN_AVAI_RATIO;
     int tmp = 0;
-    while(tmp < avaiChanNum){
+    while (tmp < avaiChanNum) {
         int t1;
 #ifdef SAME_NET_PARAMETERS_EACH_SIM
         t1 = CRmath::randInt(1, _chan_n);
@@ -26,24 +24,30 @@ vI SU::getAvaiChanRandom(int _chan_n)
 #ifdef DIFF_NET_PARAMETERS_EACH_SIM
         t1 = CRmath::randIntDiff(1, _chan_n);
 #endif
-        if(!vectorFind(ans, t1)){
+        if (!vectorFind(ans, t1)) {
             ans.push_back(t1);
             tmp++;
         }
     }
     sort(ans.begin(), ans.end());
-    return  ans;
+    return ans;
 }
 
-vI SU::getAvaiChanRandom()
-{
+vI SU::getAvaiChanRandom() {
     return getAvaiChanRandom(global::TOTAL_CHAN_NUM);
 }
 
-void SU:: initAllCognitiveRadio(int numOfCR)
-{
-    for(int i = 0; i < numOfCR; i++){
+void SU::initAllCognitiveRadio(int numOfCR) {
+    for (int i = 0; i < numOfCR; i++) {
         CognitiveRadio tmp;
         this->allCR.push_back(tmp);
     }
+}
+
+int SU::replaceNotAvaiWithAvai(int c) {
+    sort(avaiChan.begin(), avaiChan.end());
+    if (!vectorSortedFind(avaiChan, c)) {
+        return avaiChan[CRmath::randIntDiff(0, avaiChan.size() - 1)];
+    }
+    return c;
 }

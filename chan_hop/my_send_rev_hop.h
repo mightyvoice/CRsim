@@ -15,9 +15,10 @@
 #include "../lib/lib.h"
 #include "my_seq.h"
 
-class MySendRevHop : public MyHop{
+class MySendRevHop : public MyHop {
 private:
     int realChanNum;
+
     void getSendRevHopSeq();
 
 public:

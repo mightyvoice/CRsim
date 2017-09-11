@@ -14,7 +14,7 @@
 
 #include "../lib/lib.h"
 
-class DataPacket{
+class DataPacket {
 public:
     int ID; // id starts from 0
     int len; //length time slot

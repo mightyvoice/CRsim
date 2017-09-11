@@ -7,24 +7,21 @@
 
 #include "user.h"
 
-User:: User(): totalAccessChan(global::TOTAL_CHAN_NUM)
-{
+User::User() : totalAccessChan(global::TOTAL_CHAN_NUM) {
 
 }
 
-void User::printPktInterval()
-{
+void User::printPktInterval() {
     int sum = 0;
-    for(int i = 1; i < allDataPkt.size(); i++){
-        int tmp = allDataPkt[i].arrivalTimeSlot - allDataPkt[i-1].arrivalTimeSlot;
+    for (int i = 1; i < allDataPkt.size(); i++) {
+        int tmp = allDataPkt[i].arrivalTimeSlot - allDataPkt[i - 1].arrivalTimeSlot;
         sum += tmp;
-        cout<<tmp<<' ';
+        cout << tmp << ' ';
     }
-    cout<<endl<<sum/(allDataPkt.size()-1)<<endl;
+    cout << endl << sum / (allDataPkt.size() - 1) << endl;
 }
 
-void User:: initAllPkt(double arrRate, int pkt_max_len)
-{
+void User::initAllPkt(double arrRate, int pkt_max_len) {
     allDataPkt.clear();
     double st;
 #ifdef SAME_NET_PARAMETERS_EACH_SIM
@@ -34,15 +31,15 @@ void User:: initAllPkt(double arrRate, int pkt_max_len)
     st = CRmath::randExponentialDiff(arrRate);
 #endif
     int curID = 0;
-    while(true){
-        if(st - global::TOTAL_TIME_SLOT * global::TIME_SLOT_LEN > global::EPS){
+    while (true) {
+        if (st - global::TOTAL_TIME_SLOT * global::TIME_SLOT_LEN > global::EPS) {
             break;
         }
         DataPacket p;
         p.ID = curID++;
         p.arrivalTime = st;
 #ifdef SET_RANDOM_PU_PKT_LEN
-        #ifdef SAME_NET_PARAMETERS_EACH_SIM
+#ifdef SAME_NET_PARAMETERS_EACH_SIM
         p.len = CRmath::randInt(PKT_MIN_LEN_PU, pkt_max_len);
 #endif
 #ifdef DIFF_NET_PARAMETERS_EACH_SIM
@@ -63,7 +60,7 @@ void User:: initAllPkt(double arrRate, int pkt_max_len)
 #endif
         st += tmp;
     }
-    for(int i = 0; i < allDataPkt.size(); i++){
+    for (int i = 0; i < allDataPkt.size(); i++) {
         allDataPkt[i].arrivalTimeSlot = (int) (allDataPkt[i].arrivalTime / global::TIME_SLOT_LEN);
 //        cout<<allDataPkt[i].arrivalTimeSlot<<' ';
     }
@@ -71,18 +68,17 @@ void User:: initAllPkt(double arrRate, int pkt_max_len)
 //    printPktInterval();
 }
 
-void User:: initSectorSplit()
-{
-    transSectorAngle = 360.0/transSectorNum/180 * PI;
+void User::initSectorSplit() {
+    transSectorAngle = 360.0 / transSectorNum / 180 * PI;
     double a = 0;
-    for(int i = 0; i < transSectorNum; i++){
-        pair<double,double> p;
-        p = make_pair(100*cos(a), 100*sin(a));// angle
+    for (int i = 0; i < transSectorNum; i++) {
+        pair<double, double> p;
+        p = make_pair(100 * cos(a), 100 * sin(a));// angle
         sectorSplit[i] = p;
         a += transSectorAngle;
     }
     sectorSplit[transSectorNum] = sectorSplit[0];
-    for(int i = 0; i <= transSectorNum; i++){
+    for (int i = 0; i <= transSectorNum; i++) {
         sectorSplit[i].first += location.first;
         sectorSplit[i].second += location.second;
     }

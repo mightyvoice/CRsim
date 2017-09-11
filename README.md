@@ -1,5 +1,6 @@
 CRsim
 =====
+Based on **c++ 11** and **CMake**
 ## Instruction
 Write your own simulation class and run it in the main.cpp.
 

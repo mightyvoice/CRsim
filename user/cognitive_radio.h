@@ -15,7 +15,7 @@
 #include "../lib/lib.h"
 #include "user.h"
 
-class CognitiveRadio: public User{
+class CognitiveRadio : public User {
 public:
 };
 

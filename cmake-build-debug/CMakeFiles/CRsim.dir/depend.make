@@ -100,7 +100,34 @@ CMakeFiles/CRsim.dir/lib/math.cpp.o: ../lib/math.cpp
 CMakeFiles/CRsim.dir/lib/math.cpp.o: ../lib/math.h
 CMakeFiles/CRsim.dir/lib/math.cpp.o: ../lib/vec2.h
 
+CMakeFiles/CRsim.dir/main.cpp.o: ../chan_hop/all_chan_hop.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../chan_hop/chan_hop.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../chan_hop/en_jump_stay.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../chan_hop/jump_stay.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../chan_hop/my_send_rev_hop.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../chan_hop/my_seq.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../chan_hop/my_split_spec.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../chan_hop/sector_hop.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../global/configure.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../global/global.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../global/include.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../lib/debug.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../lib/graph.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../lib/lib.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../lib/math.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../lib/util.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../lib/vec2.h
 CMakeFiles/CRsim.dir/main.cpp.o: ../main.cpp
+CMakeFiles/CRsim.dir/main.cpp.o: ../network/channel.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../network/network.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../network/packet.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../simulation/DirectionalAntennaImprove.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../simulation/all_simu.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../simulation/my_su.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../user/cognitive_radio.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../user/pu.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../user/su.h
+CMakeFiles/CRsim.dir/main.cpp.o: ../user/user.h
 
 CMakeFiles/CRsim.dir/network/channel.cpp.o: ../global/configure.h
 CMakeFiles/CRsim.dir/network/channel.cpp.o: ../global/global.h

@@ -9,7 +9,7 @@
 
 const int MAX_NODE_NUM = 110;// maximum number of nodes
 
-class Edge{
+class Edge {
 public:
     int start; //start node
     int end; //end node
@@ -24,7 +24,7 @@ Edge flipAnEdge(int s, int e);
 
 /* node id and edge id all start from 0 */
 
-class CRgraph{
+class CRgraph {
 public:
     int nodeNum;
     int edgeNum;
@@ -32,44 +32,50 @@ public:
     int sinkID;
     vector<Edge> allEdge;
     int adjMatrix[MAX_NODE_NUM][MAX_NODE_NUM];
-    struct node{
+    struct node {
         int x;
-        node* next;
+        node *next;
     };
     node *adjList[MAX_NODE_NUM];
 };
 
-class GraphEdgeList : public CRgraph{
+class GraphEdgeList : public CRgraph {
 public:
     int curEdgeNum;
     vI edgeStartIndex;
 
     GraphEdgeList(int n);
+
     void addEdge(const Edge &e);
+
 private:
     vI edgeCurIndex;
 };
 
-class GraphAdjMatrix: public CRgraph{
+class GraphAdjMatrix : public CRgraph {
 public:
     int capacity[MAX_NODE_NUM][MAX_NODE_NUM];
     int maxCapacity;
     int remain[MAX_NODE_NUM][MAX_NODE_NUM];
 
     GraphAdjMatrix();
+
     void printAdjMatrixFrom0();
+
     void printAdjMatrixFrom1();
 };
 
-class GraphAdjList: public CRgraph{
+class GraphAdjList : public CRgraph {
 public:
     GraphAdjList();
 };
 
-class CRgraphAlgorithm{
+class CRgraphAlgorithm {
 public:
     static bool ifIsClique(GraphAdjMatrix g, vI x);
+
     static void maxCliqueBruteForce(GraphAdjMatrix g, int n, vI &ans);
+
     static int maxFlowEKalgorithm(GraphAdjMatrix *g);
 
 };

@@ -17,7 +17,7 @@
 #include "../network/packet.h"
 #include "../network/channel.h"
 
-class User{
+class User {
 public:
     int totalAccessChan;
     pair<double, double> location;
@@ -25,7 +25,7 @@ public:
     vI avaiChan;
     vector<DataPacket> allDataPkt;
     queue<DataPacket> pktTransQueue;
-    CRchannel allChanObj[global::TOTAL_CHAN_NUM+2];
+    CRchannel allChanObj[global::TOTAL_CHAN_NUM + 2];
 
     int avaiChanNum;
     int curStayChan;
@@ -48,19 +48,24 @@ public:
     int transSectorNum;
     double transSectorAngle;
     int curSectorID;
-    pair<double, double> sectorSplit[global::TOTAL_CHAN_NUM*2];
-    int sectorNeighborPU[35][global::PU_NUM+2];
+    pair<double, double> sectorSplit[global::TOTAL_CHAN_NUM * 2];
+    int sectorNeighborPU[35][global::PU_NUM + 2];
     int channelHopCount;
     SectorHop *secHop;
+
     void initSectorSplit();
+
     /*** Considering directional antennas ***/
 
     ChanHop *chanHop;
     vI chanHopSeq;
 
     User();
+
     void printPktInterval();
+
     void initAllPktArrivalTime(double arrRate);
+
     void initAllPkt(double arrRate, int pkt_max_len);
 };
 

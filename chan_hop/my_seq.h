@@ -15,7 +15,7 @@
 #include "../lib/lib.h"
 #include "chan_hop.h"
 
-class MyHop: public ChanHop{
+class MyHop : public ChanHop {
 public:
     int curIndex;
     int startIndex; // The start seq index, starts with 1
@@ -32,6 +32,7 @@ public:
 
     void init_seq();// Init the channel hopping sequence
     void resetChanHop();
+
     int getChanAtTimeT(int t); //Get the channel to hop to at time t if it needs the available set;
     int getChanAtTimeT(int t, const vI &avai); //Get the channel to hop to at time t;
     int getChanAtTimeTBeforeReplace(int t);

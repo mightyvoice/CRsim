@@ -187,6 +187,9 @@
 		<Unit filename="/Users/jili/CLionProjects/CRsim/simulation/DirectionalAntennaImprove.h">
 			<Option target="CRsim"/>
 		</Unit>
+		<Unit filename="/Users/jili/CLionProjects/CRsim/simulation/all_simu.h">
+			<Option target="CRsim"/>
+		</Unit>
 		<Unit filename="/Users/jili/CLionProjects/CRsim/simulation/my_su.cpp">
 			<Option target="CRsim"/>
 		</Unit>

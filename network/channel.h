@@ -14,7 +14,7 @@
 
 #include "../lib/lib.h"
 
-class CRchannel{
+class CRchannel {
 public:
     int ID;
     int curConAvaiTime;
@@ -24,6 +24,7 @@ public:
     double averageConAvaiTime;
 
     void printSortedAllConAvaiTime();
+
     double getAverConAvaiTime();
 };
 
