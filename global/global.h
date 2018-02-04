@@ -59,7 +59,6 @@ namespace global {
 
     const int INT_MAX_VAL = 2147483647;
 
-
     enum SEND_OR_RECEIVE {
         SEND = 0, RECEIVE = 1
     };

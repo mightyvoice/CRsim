@@ -85,7 +85,7 @@ public:
     /* angles between two vectors */
     static double vecAngle(const CRvec<T> &x, const CRvec<T> &y) {
         assert(x.length > global::EPS && y.length > global::EPS);
-        return acos((x * y) / (x.length * y.length));
+        return acos((x * y) * 1.0 / (x.length * y.length));
     }
 
     static bool vecRightTurn(const CRvec<T> &x, const CRvec<T> &y) {
