@@ -13,7 +13,7 @@ private:
     /* the length of the vector */
     double getLength() {
         double ans = 0;
-        ans += vec.first * vec.first + vec.second + vec.second;
+        ans += vec.first * vec.first + vec.second * vec.second;
         return sqrt(ans);
     };
 
